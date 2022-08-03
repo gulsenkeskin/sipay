@@ -25,7 +25,6 @@ namespace SipayASPNetCore.Services
             _httpClient = new HttpClient();
         }
 
-
         //TAKSİT BİLGİSİ ALMA
         //taksit listesini tarım kartları için vade aralığını ve ödeme sıklığını sağlamaktan sorumludur.
         public static SipayGetPosResponse GetPos(SipayGetPosRequest request, Settings settings, string token)
@@ -40,9 +39,6 @@ namespace SipayASPNetCore.Services
 
             return response;
         }
-
-
-
 
         public static Response PostDataAsync<Response, Request>(string endPoint, Request dto, Dictionary<string, string> headers = null)
         {
