@@ -1,0 +1,78 @@
+﻿<link rel="stylesheet" type="text/css" href="~/lib/semantic/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="~/css/card-js-and-cicleloader.min.css">
+
+<style type="text/css">
+    table tbody tr td { border-top: solid 1px #CCCCCC; border-right: solid 1px #CCCCCC; width: 80px; }
+    table { border-collapse: initial; }
+    .expiry-container .expiry-wrapper select { width: 50%; }
+    .ui.segment { border: none; box-shadow: none; padding: .5em 1em; }
+    .recurring { padding: 15px 0; font-size: 15px; }
+        .recurring label { font-weight: bold; padding-left: 10px; }
+    .ui.form .recurring input[type=checkbox], .ui.form textarea { vertical-align: unset !important; }
+
+</style>
+
+<form asp-controller="Checkout" asp-action="BrandedPayment" id="payment-form" name="form" class="ui form fluid" style="padding:10px;">
+
+    <input type="hidden" name="Is3D" />
+
+    <h4 class="ui horizontal divider header">
+        <span style="text-decoration: underline; color: black" class="tab">Markalı Ödeme</span>
+    </h4>
+
+    <div class="two fields">
+        <div class="field">
+            <input class="cvc half" name="Amount" placeholder="Miktar" required>
+        </div>
+        <div class="field">
+            <input class="cvc half" name="OrderId" placeholder="Sipariş No" required>
+        </div>
+    </div>
+    <div class="product-right">
+        <p>
+            <input id="recurringPayment" name="is_recurring_payment" type="checkbox"><b>Recurring payment</b>
+        </p>
+
+        <div id="recurringArea"  class="three fields" style="display:none;">
+            <div class="field">
+                <input type="number" name="recurring_payment_number" placeholder="Toplam Ödeme Sayısı">
+            </div>
+            <div class="field">
+                <select name="recurring_payment_cycle" id="recurring_payment_cycle">
+                    <option value="">Ödeme Tekrarlama Periyodu</option>
+                    <option value="D">Günlük</option>
+                    <option value="M">Aylık</option>
+                    <option value="Y">Yıllık</option>
+                </select>
+            </div>
+            <div class="field">
+                <input type="number" name="recurring_payment_interval" placeholder="Ödeme Sıklık Sayısı">
+            </div>
+        </div>
+    </div>
+    <div class="ui center aligned segment">
+        <button class="ui button" name="paymentButton" type="submit" style="background-color: #0094b1; color: #ffffff; width: 60%;
+          margin-left: 0;">
+            ÖDEME YAP
+        </button>
+    </div>
+</form>
+
+@section Scripts {
+
+    <script src="~/lib/semantic/semantic.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#recurringPayment').click(function () {
+                if ($(this).is(':checked')) {
+                    $("#recurringArea").show();
+                } else {
+                    $("#recurringArea").hide();
+                }
+            });
+        });
+    </script>
+
+}
+

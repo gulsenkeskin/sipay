@@ -1,0 +1,20 @@
+﻿<link rel="stylesheet" type="text/css" href="~/lib/semantic/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="~/css/card-js-and-cicleloader.min.css">
+
+<form action="" id="co-payment-method-form" name="form" class="ui form fluid" style="padding:10px;">
+    <div class="card-js" data-stripe="true">
+        <input class="name" id="the-card-name-id" name="CardholderName" placeholder="Kart Sahibinin Adı" required>
+        <input class="card-number my-custom-class" name="card-number" id="CardNumber" placeholder="Kart Numarası" required>
+
+        <input class="expiry-month" name="ExpireMonth" required>
+        <input class="expiry-year" name="ExpireYear" required>
+        <input class="cvc" name="CardCode" placeholder="Güvenlik Kodu (CVV)" required>
+    </div>
+
+    <input type="button" value="Ödeme Yap" />
+</form>
+
+@section Scripts {
+    <script src="~/lib/semantic/semantic.min.js"></script>
+    <script src="~/js/card-js.min.js"></script>
+}

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ryi8hUP99QB4X0XJ01Kl8IGMDsYVB2DXSKb9lJu8tRTMNST/XCdTW+7QlFe1Bq0beDWCIZ1mc8+KyVBt42Z75Q==",
+  "dgSpecHash": "UIkkbwClOJcicXUuZou8uxcfUXM04xAJrMj/QuCnzU2iroZlkrj9gwSFZWO1MA2XPJS7/nUOBlQHk65GCsQ22A==",
   "success": true,
   "projectFilePath": "C:\\Users\\harmo\\source\\repos\\Sipay\\SipayASPNetCore\\SipayASPNetCore\\SipayASPNetCore.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\harmo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
