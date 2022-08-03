@@ -37,11 +37,6 @@ C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netc
 C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Index.cshtml.g.cs
 C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Checkout.cshtml.g.cs
-C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\BrandedCancelUrl.cshtml.g.cs
-C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\BrandedPayment.cshtml.g.cs
-C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\BrandedSuccessUrl.cshtml.g.cs
 C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\CancelUrl.cshtml.g.cs
-C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\PaySmart.cshtml.g.cs
-C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Refund.cshtml.g.cs
 C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Request3DSipay.cshtml.g.cs
 C:\Users\harmo\source\repos\Sipay\SipayASPNetCore\SipayASPNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\SuccessUrl.cshtml.g.cs

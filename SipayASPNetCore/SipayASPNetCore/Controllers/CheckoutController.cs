@@ -91,8 +91,6 @@ namespace SipayASPNetCore.Controllers
             return View();
         }
 
-
-
         [NonAction]
         public (bool, int, string, int) GetRecurringPaymentInfo(IFormCollection form)
         {
@@ -124,8 +122,6 @@ namespace SipayASPNetCore.Controllers
 
             return (is_recurring_payment, recurring_payment_number, recurring_payment_cycle, recurring_payment_interval);
         }
-
-
 
         [NonAction]
         public PaymentModel GetPaymentInfo(IFormCollection form)
@@ -175,8 +171,6 @@ namespace SipayASPNetCore.Controllers
             return paymentInfo;
         }
 
-
-
         public ActionResult CheckBinCode(string binCode, decimal amount, bool isRecurring)
         {
             if (binCode.Length >= 6)
@@ -212,7 +206,6 @@ namespace SipayASPNetCore.Controllers
             return Ok();
         }
 
-
         [NonAction]
         public SipayTokenResponse GetAuthorizationToken(Settings settings)
         {
@@ -226,5 +219,40 @@ namespace SipayASPNetCore.Controllers
             return HttpContext.Session.Get<SipayTokenResponse>("token");
         }
 
+        public IActionResult SuccessUrl()
+        {
+            string sipay_status = HttpContext.Request.Query["sipay_status"];
+            string order_no = HttpContext.Request.Query["order_no"];
+            string invoice_id = HttpContext.Request.Query["invoice_id"];
+            string status_description = HttpContext.Request.Query["status_description"];
+            string sipay_payment_method = HttpContext.Request.Query["sipay_payment_method"];
+
+            string fullQuery = " invoice_id : " + invoice_id
+                 + "sipay_status :" + sipay_status + "order_no :" + order_no + "status_description :" + status_description
+                 + "sipay_payment_method :" + sipay_payment_method;
+
+            ViewBag.SuccessMessage = fullQuery;
+
+            return View();
+        }
+        public IActionResult CancelUrl()
+        {
+            string error_code = HttpContext.Request.Query["error-code"];
+            string error = HttpContext.Request.Query["error"];
+            string invoice_id = HttpContext.Request.Query["invoice_id"];
+
+            string sipay_status = HttpContext.Request.Query["sipay_status"];
+            string order_no = HttpContext.Request.Query["order_no"];
+            string status_description = HttpContext.Request.Query["status_description"];
+            string sipay_payment_method = HttpContext.Request.Query["sipay_payment_method"];
+
+            string fullQuery = "error_code : " + error_code + " invoice_id : " + invoice_id + " error : " + error
+                 + "sipay_status :" + sipay_status + "order_no :" + order_no + "status_description :" + status_description
+                 + "sipay_payment_method :" + sipay_payment_method;
+
+            ViewBag.Error = fullQuery;
+
+            return View();
+        }
     }
 }
